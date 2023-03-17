@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+    <img src="https://media.istockphoto.com/id/948628340/photo/old-man-protecting-house-model-with-hands-risk-insurance-the-concept-of-mortgages-and-bank.jpg?b=1&s=170667a&w=0&k=20&c=zwD6Ggmr9V52TMq15Fglr37FfDsr-wdmWvvgclmrhT8=" alt="">
+  <div class="container">
+    <div class="title">New Admission</div>
+    <div class="content">
+      <form  #f="ngForm" (ngSubmit)="addData(f)">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" name="name" placeholder="Enter your name" required [(ngModel)]="name">
+          </div>
+          <div class="input-box">
+            <span class="details">address</span>
+            <input type="text" name="address" placeholder="Enter your username" required [(ngModel)]="address">
+          </div>
+          <div class="input-box">
+            <span class="details">age</span>
+            <input type="text" name="age" placeholder="Enter your age" required [(ngModel)]="age">
+          </div>
+         
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" name="phone"placeholder="Enter your number" required [(ngModel)]="phone">
+          </div>
+          
+          
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
+

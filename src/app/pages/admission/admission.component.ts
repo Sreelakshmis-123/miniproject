@@ -2,26 +2,27 @@ import { Component } from '@angular/core';
 import { Firestore,collection,addDoc } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-enquire',
-  templateUrl: './enquire.component.html',
-  styleUrls: ['./enquire.component.css']
+  selector: 'app-admission',
+  templateUrl: './admission.component.html',
+  styleUrls: ['./admission.component.css']
 })
-export class EnquireComponent {
-  email : string ='' ;
+export class AdmissionComponent {
+
+  age : string ='' ;
   name : string ='' ;
-  message : string ='' ;
+  address : string ='' ;
+  admission : string ='' ;
   phone : string ='' ;
-  lastname : string ='' ;
   constructor(private router:Router,private firestore:Firestore){}
   
   addData(f:any)
   {
-    if(this.email == ''){
-      alert('please enter email')
+    if(this.age == ''){
+      alert('please enter age')
       return;
     }
-    if(this.message == ''){
-      alert('please enter  message')
+    if(this.address == ''){
+      alert('please enter  adress')
       return;
     }
     if(this.name == ''){
@@ -32,10 +33,10 @@ export class EnquireComponent {
       alert('please enter phone no')
       return;
     }
-    const collectionInstance =collection(this.firestore,'enquirydata');
+    const collectionInstance =collection(this.firestore,'admissiondata');
     addDoc(collectionInstance,f.value).then(() =>{
       console.log('data saved successfully')
-      alert('send successful');
+      alert('admission successful');
       this.router.navigate(['']);
     })
     .catch((err)=>{
@@ -47,4 +48,3 @@ export class EnquireComponent {
   
   
   
-

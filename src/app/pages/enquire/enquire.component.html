@@ -24,26 +24,27 @@
     </form>
   </div>-->
   <body>
+
     <h1>ENQUIRY NOW</h1>
     <p>Please fill out this form with the required information</p>
-    <form action="">
+    <form #f="ngForm" (ngSubmit)="addData(f)">
       
       <fieldset>
         <label>First Name 
-          <input type="text" name="firstname" required /></label>
+          <input type="text" name="name" required [(ngModel)]="name"></label>
         <label>Last Name 
-        <input type="text" name="lastname" required />
+        <input type="text" name="name" required [(ngModel)]="lastname">
         </label>
         <label>Email
-        <input type="email" name="email" required />
+        <input type="email" name="email" required [(ngModel)]="email">
         </label>
         <label>Phone Number 
-        <input type="text" name="phone" required />
+        <input type="text" name="phone" required [(ngModel)]="phone">
         </label>
         
        
         <label>message
-        <textarea name="additional" rows="5" cols="30" placeholder="Your message ..."></textarea>
+        <textarea name="message" rows="5" cols="30" placeholder="Your message ..." [(ngModel)]="message"></textarea>
         </label>
       </fieldset>
       <input type="submit" value="Send" />

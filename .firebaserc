@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "oldagehome-106d8": {
+      "hosting": {
+        "oldagehome": [
+          "oldagehome-106d8"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "oldagehome-106d8"
+  }
+}

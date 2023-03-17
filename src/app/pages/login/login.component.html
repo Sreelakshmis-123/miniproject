@@ -112,9 +112,9 @@
       <div class="form">
         <h2>Login</h2>
         <form>
-          <input type="text" placeholder="Username">
-          <input type="password" placeholder="Password">
-          <button>Log in</button>
+          <input type="text" name="email" placeholder="Email" [(ngModel)]="email">
+          <input type="password" name="password" placeholder="Password" [(ngModel)]="password">
+          <button (click)="Signinpage()">Log in</button>
         </form>
         <p class="message">Not registered? <a href="register">Create an account</a></p>
         

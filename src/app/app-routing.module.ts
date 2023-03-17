@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './pages/about/about.component';
+import { AdmissionComponent } from './pages/admission/admission.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { EnquireComponent } from './pages/enquire/enquire.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
@@ -56,6 +57,9 @@ const routes: Routes = [
   },
   {
     path:'register',component:RegisterComponent
+  },
+  {
+    path:'admission',component:AdmissionComponent
   },
 ];
 

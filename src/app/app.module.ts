@@ -18,6 +18,14 @@ import { WhyusComponent } from './pages/whyus/whyus.component';
 import { SingleservicesComponent } from './pages/singleservices/singleservices.component';
 import { EnquireComponent } from './pages/enquire/enquire.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { AdmissionComponent } from './pages/admission/admission.component';
+import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -35,11 +43,18 @@ import { RegisterComponent } from './pages/register/register.component';
   
     SingleservicesComponent,
        EnquireComponent,
-       RegisterComponent
+       RegisterComponent,
+       AdmissionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
